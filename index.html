@@ -6,21 +6,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js"
             integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<button onclick="showHome()">Trang chủ</button>
-<button onclick="showFormCreate()">Thêm mới</button>
-<input type="text" id="name" placeholder="Nhập">
-<button onclick="searchByName()">Tìm kiếm</button>
-<div id="main">
-
-</div>
+<center>
+    <button onclick="showHome()">Quản lý sản phẩm</button>
+    <button onclick="showFormCreate()">Thêm mới</button>
+    <br>
+    <br>
+    <input type="text" id="name" placeholder="Nhập">
+    <button onclick="searchByName()">Tìm kiếm</button>
+    <br>
+    <br>
+    <input type="text" id="minPrice" placeholder="Nhập giá thấp nhất">
+    <input type="text" id="maxPrice" placeholder="Nhập giá cao nhất">
+    <button onclick="findByPrice()">Tìm kiếm</button>
+    <br>
+    <br>
+    <div id="main"></div>
+</center>
 <script src="product/home.js"></script>
 <script src="product/create.js"></script>
 <script src="product/edit.js"></script>
 <script src="product/search.js"></script>
+<script>
+    const colors = ['#FF0000', '#FFA500', '#FFFF00', '#008000', '#0000FF', '#4B0082', '#9400D3'];
+
+    function changeBackgroundColor() {
+        const randomColorIndex = Math.floor(Math.random() * colors.length);
+        const randomColor = colors[randomColorIndex];
+        document.body.style.backgroundColor = randomColor;
+    }
+    setInterval(changeBackgroundColor, 300);
+</script>
 </body>
 </html>

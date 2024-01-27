@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400");
+@import url("https://use.fontawesome.com/releases/v6.4.2/css/all.css");
+
+body {
+    margin: 0;
+    height: 100vh;
+    transition: background-color 1s ease;
+    display: flex;
+    background:  #ccc;
+}
